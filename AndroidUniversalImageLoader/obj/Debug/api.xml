@@ -1,0 +1,2108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<api>
+<package name="com.nostra13.universalimageloader.cache.disc">
+<class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BaseDiscCache" static="false" visibility="public">
+<implements name="com.nostra13.universalimageloader.cache.disc.DiscCacheAware" name-generic-aware="com.nostra13.universalimageloader.cache.disc.DiscCacheAware">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="BaseDiscCache" static="false" type="com.nostra13.universalimageloader.cache.disc.BaseDiscCache" visibility="public">
+<parameter name="p0" type="java.io.File">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="BaseDiscCache" static="false" type="com.nostra13.universalimageloader.cache.disc.BaseDiscCache" visibility="public">
+<parameter name="p0" type="java.io.File">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="clear" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="java.io.File" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="false" name="cacheDir" static="false" transient="false" type="java.io.File" type-generic-aware="java.io.File" visibility="protected" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="DiscCacheAware" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="clear" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="get" native="false" return="java.io.File" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="put" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.io.File">
+</parameter>
+</method>
+</interface>
+<class abstract="true" deprecated="not deprecated" extends="com.nostra13.universalimageloader.cache.disc.BaseDiscCache" extends-generic-aware="com.nostra13.universalimageloader.cache.disc.BaseDiscCache" final="false" name="LimitedDiscCache" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="LimitedDiscCache" static="false" type="com.nostra13.universalimageloader.cache.disc.LimitedDiscCache" visibility="public">
+<parameter name="p0" type="java.io.File">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="LimitedDiscCache" static="false" type="com.nostra13.universalimageloader.cache.disc.LimitedDiscCache" visibility="public">
+<parameter name="p0" type="java.io.File">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</constructor>
+<method abstract="true" deprecated="not deprecated" final="false" name="getSize" native="false" return="int" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.io.File">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="put" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.io.File">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="LimitedDiscCache.1" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+</package>
+<package name="com.nostra13.universalimageloader.cache.disc.impl">
+<class abstract="false" deprecated="not deprecated" extends="com.nostra13.universalimageloader.cache.disc.LimitedDiscCache" extends-generic-aware="com.nostra13.universalimageloader.cache.disc.LimitedDiscCache" final="false" name="FileCountLimitedDiscCache" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="FileCountLimitedDiscCache" static="false" type="com.nostra13.universalimageloader.cache.disc.impl.FileCountLimitedDiscCache" visibility="public">
+<parameter name="p0" type="java.io.File">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="FileCountLimitedDiscCache" static="false" type="com.nostra13.universalimageloader.cache.disc.impl.FileCountLimitedDiscCache" visibility="public">
+<parameter name="p0" type="java.io.File">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSize" native="false" return="int" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.io.File">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.nostra13.universalimageloader.cache.disc.BaseDiscCache" extends-generic-aware="com.nostra13.universalimageloader.cache.disc.BaseDiscCache" final="false" name="LimitedAgeDiscCache" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="LimitedAgeDiscCache" static="false" type="com.nostra13.universalimageloader.cache.disc.impl.LimitedAgeDiscCache" visibility="public">
+<parameter name="p0" type="java.io.File">
+</parameter>
+<parameter name="p1" type="long">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="LimitedAgeDiscCache" static="false" type="com.nostra13.universalimageloader.cache.disc.impl.LimitedAgeDiscCache" visibility="public">
+<parameter name="p0" type="java.io.File">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator">
+</parameter>
+<parameter name="p2" type="long">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="put" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.io.File">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.nostra13.universalimageloader.cache.disc.LimitedDiscCache" extends-generic-aware="com.nostra13.universalimageloader.cache.disc.LimitedDiscCache" final="false" name="TotalSizeLimitedDiscCache" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="TotalSizeLimitedDiscCache" static="false" type="com.nostra13.universalimageloader.cache.disc.impl.TotalSizeLimitedDiscCache" visibility="public">
+<parameter name="p0" type="java.io.File">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="TotalSizeLimitedDiscCache" static="false" type="com.nostra13.universalimageloader.cache.disc.impl.TotalSizeLimitedDiscCache" visibility="public">
+<parameter name="p0" type="java.io.File">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSize" native="false" return="int" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.io.File">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.nostra13.universalimageloader.cache.disc.BaseDiscCache" extends-generic-aware="com.nostra13.universalimageloader.cache.disc.BaseDiscCache" final="false" name="UnlimitedDiscCache" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="UnlimitedDiscCache" static="false" type="com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache" visibility="public">
+<parameter name="p0" type="java.io.File">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="UnlimitedDiscCache" static="false" type="com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache" visibility="public">
+<parameter name="p0" type="java.io.File">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="put" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.io.File">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.nostra13.universalimageloader.cache.disc.naming">
+<interface abstract="true" deprecated="not deprecated" final="false" name="FileNameGenerator" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="generate" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="HashCodeFileNameGenerator" static="false" visibility="public">
+<implements name="com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator" name-generic-aware="com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="HashCodeFileNameGenerator" static="false" type="com.nostra13.universalimageloader.cache.disc.naming.HashCodeFileNameGenerator" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="generate" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Md5FileNameGenerator" static="false" visibility="public">
+<implements name="com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator" name-generic-aware="com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="Md5FileNameGenerator" static="false" type="com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="generate" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.nostra13.universalimageloader.cache.memory">
+<class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BaseMemoryCache" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="K"/>
+<typeParameter name="V"/>
+</typeParameters>
+<implements name="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware" name-generic-aware="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware&lt;K, V&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="BaseMemoryCache" static="false" type="com.nostra13.universalimageloader.cache.memory.BaseMemoryCache" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="clear" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="createReference" native="false" return="java.lang.ref.Reference&lt;V&gt;" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="V">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="V" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="K">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="keys" native="false" return="java.util.Collection&lt;K&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="put" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="K">
+</parameter>
+<parameter name="p1" type="V">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remove" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="K">
+</parameter>
+</method>
+</class>
+<class abstract="true" deprecated="not deprecated" extends="com.nostra13.universalimageloader.cache.memory.BaseMemoryCache" extends-generic-aware="com.nostra13.universalimageloader.cache.memory.BaseMemoryCache&lt;K, V&gt;" final="false" name="LimitedMemoryCache" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="K"/>
+<typeParameter name="V"/>
+</typeParameters>
+<constructor deprecated="not deprecated" final="false" name="LimitedMemoryCache" static="false" type="com.nostra13.universalimageloader.cache.memory.LimitedMemoryCache" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</constructor>
+<method abstract="true" deprecated="not deprecated" final="false" name="getSize" native="false" return="int" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="V">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSizeLimit" native="false" return="int" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="removeNext" native="false" return="V" static="false" synchronized="false" visibility="protected">
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="MemoryCacheAware" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="K"/>
+<typeParameter name="V"/>
+</typeParameters>
+<method abstract="true" deprecated="not deprecated" final="false" name="clear" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="get" native="false" return="V" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="K">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="keys" native="false" return="java.util.Collection&lt;K&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="put" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="K">
+</parameter>
+<parameter name="p1" type="V">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="remove" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="K">
+</parameter>
+</method>
+</interface>
+</package>
+<package name="com.nostra13.universalimageloader.cache.memory.impl">
+<class abstract="false" deprecated="not deprecated" extends="com.nostra13.universalimageloader.cache.memory.LimitedMemoryCache" extends-generic-aware="com.nostra13.universalimageloader.cache.memory.LimitedMemoryCache&lt;java.lang.String, android.graphics.Bitmap&gt;" final="false" name="FIFOLimitedMemoryCache" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="FIFOLimitedMemoryCache" static="false" type="com.nostra13.universalimageloader.cache.memory.impl.FIFOLimitedMemoryCache" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="createReference" native="false" return="java.lang.ref.Reference&lt;android.graphics.Bitmap&gt;" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSize" native="false" return="int" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="put" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remove" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeNext" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="protected">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="FuzzyKeyMemoryCache" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="K"/>
+<typeParameter name="V"/>
+</typeParameters>
+<implements name="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware" name-generic-aware="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware&lt;K, V&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="FuzzyKeyMemoryCache" static="false" type="com.nostra13.universalimageloader.cache.memory.impl.FuzzyKeyMemoryCache" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware&lt;K, V&gt;">
+</parameter>
+<parameter name="p1" type="java.util.Comparator&lt;K&gt;">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="clear" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="V" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="K">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="keys" native="false" return="java.util.Collection&lt;K&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="put" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="K">
+</parameter>
+<parameter name="p1" type="V">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remove" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="K">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.nostra13.universalimageloader.cache.memory.LimitedMemoryCache" extends-generic-aware="com.nostra13.universalimageloader.cache.memory.LimitedMemoryCache&lt;java.lang.String, android.graphics.Bitmap&gt;" final="false" name="LRULimitedMemoryCache" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="LRULimitedMemoryCache" static="false" type="com.nostra13.universalimageloader.cache.memory.impl.LRULimitedMemoryCache" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="createReference" native="false" return="java.lang.ref.Reference&lt;android.graphics.Bitmap&gt;" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSize" native="false" return="int" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="put" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remove" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeNext" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="protected">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.nostra13.universalimageloader.cache.memory.LimitedMemoryCache" extends-generic-aware="com.nostra13.universalimageloader.cache.memory.LimitedMemoryCache&lt;java.lang.String, android.graphics.Bitmap&gt;" final="false" name="LargestLimitedMemoryCache" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="LargestLimitedMemoryCache" static="false" type="com.nostra13.universalimageloader.cache.memory.impl.LargestLimitedMemoryCache" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="createReference" native="false" return="java.lang.ref.Reference&lt;android.graphics.Bitmap&gt;" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSize" native="false" return="int" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="put" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remove" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeNext" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="protected">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="LimitedAgeMemoryCache" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="K"/>
+<typeParameter name="V"/>
+</typeParameters>
+<implements name="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware" name-generic-aware="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware&lt;K, V&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="LimitedAgeMemoryCache" static="false" type="com.nostra13.universalimageloader.cache.memory.impl.LimitedAgeMemoryCache" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware&lt;K, V&gt;">
+</parameter>
+<parameter name="p1" type="long">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="clear" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="V" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="K">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="keys" native="false" return="java.util.Collection&lt;K&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="put" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="K">
+</parameter>
+<parameter name="p1" type="V">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remove" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="K">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="LruMemoryCache" static="false" visibility="public">
+<implements name="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware" name-generic-aware="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware&lt;java.lang.String, android.graphics.Bitmap&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="LruMemoryCache" static="false" type="com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="clear" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="true" name="get" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="keys" native="false" return="java.util.Collection&lt;java.lang.String&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="true" name="put" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="true" name="remove" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="true" name="toString" native="false" return="java.lang.String" static="false" synchronized="true" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.nostra13.universalimageloader.cache.memory.LimitedMemoryCache" extends-generic-aware="com.nostra13.universalimageloader.cache.memory.LimitedMemoryCache&lt;java.lang.String, android.graphics.Bitmap&gt;" final="false" name="UsingFreqLimitedMemoryCache" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="UsingFreqLimitedMemoryCache" static="false" type="com.nostra13.universalimageloader.cache.memory.impl.UsingFreqLimitedMemoryCache" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="createReference" native="false" return="java.lang.ref.Reference&lt;android.graphics.Bitmap&gt;" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getSize" native="false" return="int" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="put" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remove" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeNext" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="protected">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.nostra13.universalimageloader.cache.memory.BaseMemoryCache" extends-generic-aware="com.nostra13.universalimageloader.cache.memory.BaseMemoryCache&lt;java.lang.String, android.graphics.Bitmap&gt;" final="false" name="WeakMemoryCache" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="WeakMemoryCache" static="false" type="com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="createReference" native="false" return="java.lang.ref.Reference&lt;android.graphics.Bitmap&gt;" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.nostra13.universalimageloader.core">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="DefaultConfigurationFactory" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="DefaultConfigurationFactory" static="false" type="com.nostra13.universalimageloader.core.DefaultConfigurationFactory" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="createBitmapDisplayer" native="false" return="com.nostra13.universalimageloader.core.display.BitmapDisplayer" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createDiscCache" native="false" return="com.nostra13.universalimageloader.cache.disc.DiscCacheAware" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createExecutor" native="false" return="java.util.concurrent.Executor" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="com.nostra13.universalimageloader.core.assist.QueueProcessingType">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createFileNameGenerator" native="false" return="com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createImageDecoder" native="false" return="com.nostra13.universalimageloader.core.decode.ImageDecoder" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createImageDownloader" native="false" return="com.nostra13.universalimageloader.core.download.ImageDownloader" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createMemoryCache" native="false" return="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware&lt;java.lang.String, android.graphics.Bitmap&gt;" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="createReserveDiscCache" native="false" return="com.nostra13.universalimageloader.cache.disc.DiscCacheAware" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="DefaultConfigurationFactory.DefaultThreadFactory" static="true" visibility="">
+<implements name="java.util.concurrent.ThreadFactory" name-generic-aware="java.util.concurrent.ThreadFactory">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="newThread" native="false" return="java.lang.Thread" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Runnable">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="DisplayBitmapTask" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="DisplayBitmapTask" static="false" type="com.nostra13.universalimageloader.core.DisplayBitmapTask" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.core.ImageLoadingInfo">
+</parameter>
+<parameter name="p2" type="com.nostra13.universalimageloader.core.ImageLoaderEngine">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="DisplayImageOptions" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="createSimple" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDecodingOptions" native="false" return="android.graphics.BitmapFactory.Options" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDelayBeforeLoading" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDisplayer" native="false" return="com.nostra13.universalimageloader.core.display.BitmapDisplayer" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getExtraForDownloader" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getHandler" native="false" return="android.os.Handler" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getImageForEmptyUri" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getImageOnFail" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getImageScaleType" native="false" return="com.nostra13.universalimageloader.core.assist.ImageScaleType" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPostProcessor" native="false" return="com.nostra13.universalimageloader.core.process.BitmapProcessor" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getPreProcessor" native="false" return="com.nostra13.universalimageloader.core.process.BitmapProcessor" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getStubImage" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isCacheInMemory" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isCacheOnDisc" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isResetViewBeforeLoading" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="shouldDelayBeforeLoading" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="shouldPostProcess" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="shouldPreProcess" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="shouldShowImageForEmptyUri" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="shouldShowImageOnFail" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="shouldShowStubImage" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="DisplayImageOptions.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="DisplayImageOptions.Builder" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="DisplayImageOptions.Builder" static="false" type="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="bitmapConfig" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap.Config">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="build" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="cacheInMemory" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="cacheOnDisc" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="cloneFrom" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.DisplayImageOptions">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="decodingOptions" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.BitmapFactory.Options">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="delayBeforeLoading" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="displayer" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.display.BitmapDisplayer">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="extraForDownloader" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="handler" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.os.Handler">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="imageScaleType" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.assist.ImageScaleType">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="postProcessor" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.process.BitmapProcessor">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="preProcessor" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.process.BitmapProcessor">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="resetViewBeforeLoading" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="showImageForEmptyUri" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="showImageOnFail" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="showStubImage" native="false" return="com.nostra13.universalimageloader.core.DisplayImageOptions.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ImageLoader" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="ImageLoader" static="false" type="com.nostra13.universalimageloader.core.ImageLoader" visibility="protected">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="cancelDisplayTask" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.widget.ImageView">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="clearDiscCache" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="clearMemoryCache" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="denyNetworkDownloads" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="destroy" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="displayImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.widget.ImageView">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="displayImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.widget.ImageView">
+</parameter>
+<parameter name="p2" type="com.nostra13.universalimageloader.core.DisplayImageOptions">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="displayImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.widget.ImageView">
+</parameter>
+<parameter name="p2" type="com.nostra13.universalimageloader.core.DisplayImageOptions">
+</parameter>
+<parameter name="p3" type="com.nostra13.universalimageloader.core.assist.ImageLoadingListener">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="displayImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.widget.ImageView">
+</parameter>
+<parameter name="p2" type="com.nostra13.universalimageloader.core.assist.ImageLoadingListener">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDiscCache" native="false" return="com.nostra13.universalimageloader.cache.disc.DiscCacheAware" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getInstance" native="false" return="com.nostra13.universalimageloader.core.ImageLoader" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getLoadingUriForView" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.widget.ImageView">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMemoryCache" native="false" return="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware&lt;java.lang.String, android.graphics.Bitmap&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="handleSlowNetwork" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="init" native="false" return="void" static="false" synchronized="true" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.ImageLoaderConfiguration">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isInited" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="loadImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.core.DisplayImageOptions">
+</parameter>
+<parameter name="p2" type="com.nostra13.universalimageloader.core.assist.ImageLoadingListener">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="loadImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.core.assist.ImageLoadingListener">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="loadImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.core.assist.ImageSize">
+</parameter>
+<parameter name="p2" type="com.nostra13.universalimageloader.core.DisplayImageOptions">
+</parameter>
+<parameter name="p3" type="com.nostra13.universalimageloader.core.assist.ImageLoadingListener">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="loadImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.core.assist.ImageSize">
+</parameter>
+<parameter name="p2" type="com.nostra13.universalimageloader.core.assist.ImageLoadingListener">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="pause" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="resume" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="stop" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="TAG" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="ImageLoaderConfiguration" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="createDefault" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ImageLoaderConfiguration.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ImageLoaderConfiguration.Builder" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="ImageLoaderConfiguration.Builder" static="false" type="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="build" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="defaultDisplayImageOptions" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.DisplayImageOptions">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="denyCacheImageMultipleSizesInMemory" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="discCache" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.cache.disc.DiscCacheAware">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="discCacheExtraOptions" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="android.graphics.Bitmap.CompressFormat">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="discCacheFileCount" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="discCacheFileNameGenerator" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="discCacheSize" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="enableLogging" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="imageDecoder" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.decode.ImageDecoder">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="imageDownloader" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.download.ImageDownloader">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="memoryCache" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware&lt;java.lang.String, android.graphics.Bitmap&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="memoryCacheExtraOptions" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="memoryCacheSize" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="taskExecutor" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.concurrent.Executor">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="taskExecutorForCachedImages" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.concurrent.Executor">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="tasksProcessingOrder" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.assist.QueueProcessingType">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="threadPoolSize" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="threadPriority" native="false" return="com.nostra13.universalimageloader.core.ImageLoaderConfiguration.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="DEFAULT_TASK_PROCESSING_TYPE" static="true" transient="false" type="com.nostra13.universalimageloader.core.assist.QueueProcessingType" type-generic-aware="com.nostra13.universalimageloader.core.assist.QueueProcessingType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEFAULT_THREAD_POOL_SIZE" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEFAULT_THREAD_PRIORITY" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ImageLoaderEngine" static="false" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ImageLoaderEngine.1" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="ImageLoadingInfo" static="false" visibility="">
+<constructor deprecated="not deprecated" final="false" name="ImageLoadingInfo" static="false" type="com.nostra13.universalimageloader.core.ImageLoadingInfo" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.widget.ImageView">
+</parameter>
+<parameter name="p2" type="com.nostra13.universalimageloader.core.assist.ImageSize">
+</parameter>
+<parameter name="p3" type="java.lang.String">
+</parameter>
+<parameter name="p4" type="com.nostra13.universalimageloader.core.DisplayImageOptions">
+</parameter>
+<parameter name="p5" type="com.nostra13.universalimageloader.core.assist.ImageLoadingListener">
+</parameter>
+<parameter name="p6" type="java.util.concurrent.locks.ReentrantLock">
+</parameter>
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="LoadAndDisplayImageTask" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="LoadAndDisplayImageTask" static="false" type="com.nostra13.universalimageloader.core.LoadAndDisplayImageTask" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.ImageLoaderEngine">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.core.ImageLoadingInfo">
+</parameter>
+<parameter name="p2" type="android.os.Handler">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="LoadAndDisplayImageTask.1" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="LoadAndDisplayImageTask.2" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ProcessAndDisplayImageTask" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="ProcessAndDisplayImageTask" static="false" type="com.nostra13.universalimageloader.core.ProcessAndDisplayImageTask" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.ImageLoaderEngine">
+</parameter>
+<parameter name="p1" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p2" type="com.nostra13.universalimageloader.core.ImageLoadingInfo">
+</parameter>
+<parameter name="p3" type="android.os.Handler">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+</package>
+<package name="com.nostra13.universalimageloader.core.assist">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="DiscCacheUtil" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="findInCache" native="false" return="java.io.File" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.cache.disc.DiscCacheAware">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeFromCache" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.cache.disc.DiscCacheAware">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="FailReason" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="FailReason" static="false" type="com.nostra13.universalimageloader.core.assist.FailReason" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.assist.FailReason.FailType">
+</parameter>
+<parameter name="p1" type="java.lang.Throwable">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getCause" native="false" return="java.lang.Throwable" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getType" native="false" return="com.nostra13.universalimageloader.core.assist.FailReason.FailType" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.nostra13.universalimageloader.core.assist.FailReason.FailType&gt;" final="true" name="FailReason.FailType" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.nostra13.universalimageloader.core.assist.FailReason.FailType" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.nostra13.universalimageloader.core.assist.FailReason.FailType[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="DECODING_ERROR" static="true" transient="false" type="com.nostra13.universalimageloader.core.assist.FailReason.FailType" type-generic-aware="com.nostra13.universalimageloader.core.assist.FailReason.FailType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="IO_ERROR" static="true" transient="false" type="com.nostra13.universalimageloader.core.assist.FailReason.FailType" type-generic-aware="com.nostra13.universalimageloader.core.assist.FailReason.FailType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NETWORK_DENIED" static="true" transient="false" type="com.nostra13.universalimageloader.core.assist.FailReason.FailType" type-generic-aware="com.nostra13.universalimageloader.core.assist.FailReason.FailType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="OUT_OF_MEMORY" static="true" transient="false" type="com.nostra13.universalimageloader.core.assist.FailReason.FailType" type-generic-aware="com.nostra13.universalimageloader.core.assist.FailReason.FailType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="UNKNOWN" static="true" transient="false" type="com.nostra13.universalimageloader.core.assist.FailReason.FailType" type-generic-aware="com.nostra13.universalimageloader.core.assist.FailReason.FailType" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.io.FilterInputStream" extends-generic-aware="java.io.FilterInputStream" final="false" name="FlushedInputStream" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="FlushedInputStream" static="false" type="com.nostra13.universalimageloader.core.assist.FlushedInputStream" visibility="public">
+<parameter name="p0" type="java.io.InputStream">
+</parameter>
+</constructor>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="ImageLoadingListener" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onLoadingCancelled" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.view.View">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onLoadingComplete" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.view.View">
+</parameter>
+<parameter name="p2" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onLoadingFailed" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.view.View">
+</parameter>
+<parameter name="p2" type="com.nostra13.universalimageloader.core.assist.FailReason">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onLoadingStarted" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.view.View">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.nostra13.universalimageloader.core.assist.ImageScaleType&gt;" final="true" name="ImageScaleType" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.nostra13.universalimageloader.core.assist.ImageScaleType" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.nostra13.universalimageloader.core.assist.ImageScaleType[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="EXACTLY" static="true" transient="false" type="com.nostra13.universalimageloader.core.assist.ImageScaleType" type-generic-aware="com.nostra13.universalimageloader.core.assist.ImageScaleType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="EXACTLY_STRETCHED" static="true" transient="false" type="com.nostra13.universalimageloader.core.assist.ImageScaleType" type-generic-aware="com.nostra13.universalimageloader.core.assist.ImageScaleType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="IN_SAMPLE_INT" static="true" transient="false" type="com.nostra13.universalimageloader.core.assist.ImageScaleType" type-generic-aware="com.nostra13.universalimageloader.core.assist.ImageScaleType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="IN_SAMPLE_POWER_OF_2" static="true" transient="false" type="com.nostra13.universalimageloader.core.assist.ImageScaleType" type-generic-aware="com.nostra13.universalimageloader.core.assist.ImageScaleType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NONE" static="true" transient="false" type="com.nostra13.universalimageloader.core.assist.ImageScaleType" type-generic-aware="com.nostra13.universalimageloader.core.assist.ImageScaleType" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ImageSize" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="ImageSize" static="false" type="com.nostra13.universalimageloader.core.assist.ImageSize" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="ImageSize" static="false" type="com.nostra13.universalimageloader.core.assist.ImageSize" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getHeight" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getWidth" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="scale" native="false" return="com.nostra13.universalimageloader.core.assist.ImageSize" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="float">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="scaleDown" native="false" return="com.nostra13.universalimageloader.core.assist.ImageSize" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="MemoryCacheUtil" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="createFuzzyKeyComparator" native="false" return="java.util.Comparator&lt;java.lang.String&gt;" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="findCacheKeysForImageUri" native="false" return="java.util.List&lt;java.lang.String&gt;" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware&lt;java.lang.String, android.graphics.Bitmap&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="findCachedBitmapsForImageUri" native="false" return="java.util.List&lt;android.graphics.Bitmap&gt;" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware&lt;java.lang.String, android.graphics.Bitmap&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="generateKey" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.core.assist.ImageSize">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeFromCache" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.cache.memory.MemoryCacheAware&lt;java.lang.String, android.graphics.Bitmap&gt;">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MemoryCacheUtil.1" static="true" visibility="">
+<implements name="java.util.Comparator" name-generic-aware="java.util.Comparator&lt;java.lang.String&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="compare" native="false" return="int" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+<parameter name="p1" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="compare" native="false" return="int" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PauseOnScrollListener" static="false" visibility="public">
+<implements name="android.widget.AbsListView.OnScrollListener" name-generic-aware="android.widget.AbsListView.OnScrollListener">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="PauseOnScrollListener" static="false" type="com.nostra13.universalimageloader.core.assist.PauseOnScrollListener" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.ImageLoader">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+<parameter name="p2" type="boolean">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="PauseOnScrollListener" static="false" type="com.nostra13.universalimageloader.core.assist.PauseOnScrollListener" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.ImageLoader">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+<parameter name="p2" type="boolean">
+</parameter>
+<parameter name="p3" type="android.widget.AbsListView.OnScrollListener">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="onScroll" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.widget.AbsListView">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onScrollStateChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.widget.AbsListView">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.nostra13.universalimageloader.core.assist.QueueProcessingType&gt;" final="true" name="QueueProcessingType" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.nostra13.universalimageloader.core.assist.QueueProcessingType" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.nostra13.universalimageloader.core.assist.QueueProcessingType[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="FIFO" static="true" transient="false" type="com.nostra13.universalimageloader.core.assist.QueueProcessingType" type-generic-aware="com.nostra13.universalimageloader.core.assist.QueueProcessingType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LIFO" static="true" transient="false" type="com.nostra13.universalimageloader.core.assist.QueueProcessingType" type-generic-aware="com.nostra13.universalimageloader.core.assist.QueueProcessingType" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SimpleImageLoadingListener" static="false" visibility="public">
+<implements name="com.nostra13.universalimageloader.core.assist.ImageLoadingListener" name-generic-aware="com.nostra13.universalimageloader.core.assist.ImageLoadingListener">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="SimpleImageLoadingListener" static="false" type="com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="onLoadingCancelled" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.view.View">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onLoadingComplete" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.view.View">
+</parameter>
+<parameter name="p2" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onLoadingFailed" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.view.View">
+</parameter>
+<parameter name="p2" type="com.nostra13.universalimageloader.core.assist.FailReason">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onLoadingStarted" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="android.view.View">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.nostra13.universalimageloader.core.assist.ViewScaleType&gt;" final="true" name="ViewScaleType" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="fromImageView" native="false" return="com.nostra13.universalimageloader.core.assist.ViewScaleType" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.widget.ImageView">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.nostra13.universalimageloader.core.assist.ViewScaleType" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.nostra13.universalimageloader.core.assist.ViewScaleType[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="CROP" static="true" transient="false" type="com.nostra13.universalimageloader.core.assist.ViewScaleType" type-generic-aware="com.nostra13.universalimageloader.core.assist.ViewScaleType" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FIT_INSIDE" static="true" transient="false" type="com.nostra13.universalimageloader.core.assist.ViewScaleType" type-generic-aware="com.nostra13.universalimageloader.core.assist.ViewScaleType" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ViewScaleType.1" static="true" visibility=""/>
+</package>
+<package name="com.nostra13.universalimageloader.core.assist.deque">
+<interface abstract="true" deprecated="not deprecated" final="false" name="BlockingDeque" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="E"/>
+</typeParameters>
+<implements name="com.nostra13.universalimageloader.core.assist.deque.Deque" name-generic-aware="com.nostra13.universalimageloader.core.assist.deque.Deque&lt;E&gt;">
+</implements>
+<implements name="java.util.concurrent.BlockingQueue" name-generic-aware="java.util.concurrent.BlockingQueue&lt;E&gt;">
+</implements>
+<method abstract="true" deprecated="not deprecated" final="false" name="add" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="addFirst" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="addLast" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="element" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="iterator" native="false" return="java.util.Iterator&lt;E&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="offer" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="offer" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+<parameter name="p1" type="long">
+</parameter>
+<parameter name="p2" type="java.util.concurrent.TimeUnit">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="offerFirst" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="offerFirst" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+<parameter name="p1" type="long">
+</parameter>
+<parameter name="p2" type="java.util.concurrent.TimeUnit">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="offerLast" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="offerLast" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+<parameter name="p1" type="long">
+</parameter>
+<parameter name="p2" type="java.util.concurrent.TimeUnit">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="peek" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="poll" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="poll" native="false" return="E" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+<parameter name="p1" type="java.util.concurrent.TimeUnit">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="pollFirst" native="false" return="E" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+<parameter name="p1" type="java.util.concurrent.TimeUnit">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="pollLast" native="false" return="E" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+<parameter name="p1" type="java.util.concurrent.TimeUnit">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="push" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="put" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="putFirst" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="putLast" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="remove" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="remove" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="removeFirstOccurrence" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="removeLastOccurrence" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="size" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="take" native="false" return="E" static="false" synchronized="false" visibility="public">
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="takeFirst" native="false" return="E" static="false" synchronized="false" visibility="public">
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="takeLast" native="false" return="E" static="false" synchronized="false" visibility="public">
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+</interface>
+<interface abstract="true" deprecated="not deprecated" final="false" name="Deque" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="E"/>
+</typeParameters>
+<implements name="java.util.Queue" name-generic-aware="java.util.Queue&lt;E&gt;">
+</implements>
+<method abstract="true" deprecated="not deprecated" final="false" name="add" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="addFirst" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="addLast" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="descendingIterator" native="false" return="java.util.Iterator&lt;E&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="element" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getFirst" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getLast" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="iterator" native="false" return="java.util.Iterator&lt;E&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="offer" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="offerFirst" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="offerLast" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="peek" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="peekFirst" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="peekLast" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="poll" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="pollFirst" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="pollLast" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="pop" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="push" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="remove" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="remove" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="removeFirst" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="removeFirstOccurrence" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="removeLast" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="removeLastOccurrence" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="size" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque" extends-generic-aware="com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque&lt;T&gt;" final="false" name="LIFOLinkedBlockingDeque" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<constructor deprecated="not deprecated" final="false" name="LIFOLinkedBlockingDeque" static="false" type="com.nostra13.universalimageloader.core.assist.deque.LIFOLinkedBlockingDeque" visibility="public">
+</constructor>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.util.AbstractQueue" extends-generic-aware="java.util.AbstractQueue&lt;E&gt;" final="false" name="LinkedBlockingDeque" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="E"/>
+</typeParameters>
+<implements name="com.nostra13.universalimageloader.core.assist.deque.BlockingDeque" name-generic-aware="com.nostra13.universalimageloader.core.assist.deque.BlockingDeque&lt;E&gt;">
+</implements>
+<implements name="java.io.Serializable" name-generic-aware="java.io.Serializable">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="LinkedBlockingDeque" static="false" type="com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="LinkedBlockingDeque" static="false" type="com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque" visibility="public">
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="LinkedBlockingDeque" static="false" type="com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque" visibility="public">
+<parameter name="p0" type="java.util.Collection&lt;? extends E&gt;">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="addFirst" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="addLast" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="descendingIterator" native="false" return="java.util.Iterator&lt;E&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="drainTo" native="false" return="int" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.Collection&lt;? super E&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="drainTo" native="false" return="int" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.Collection&lt;? super E&gt;">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getFirst" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getLast" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="iterator" native="false" return="java.util.Iterator&lt;E&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="offer" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="offer" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+<parameter name="p1" type="long">
+</parameter>
+<parameter name="p2" type="java.util.concurrent.TimeUnit">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="offerFirst" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="offerFirst" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+<parameter name="p1" type="long">
+</parameter>
+<parameter name="p2" type="java.util.concurrent.TimeUnit">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="offerLast" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="offerLast" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+<parameter name="p1" type="long">
+</parameter>
+<parameter name="p2" type="java.util.concurrent.TimeUnit">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="peek" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="peekFirst" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="peekLast" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="poll" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="poll" native="false" return="E" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+<parameter name="p1" type="java.util.concurrent.TimeUnit">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="pollFirst" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="pollFirst" native="false" return="E" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+<parameter name="p1" type="java.util.concurrent.TimeUnit">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="pollLast" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="pollLast" native="false" return="E" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="long">
+</parameter>
+<parameter name="p1" type="java.util.concurrent.TimeUnit">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="pop" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="push" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="put" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="putFirst" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="putLast" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="E">
+</parameter>
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remainingCapacity" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeFirst" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeFirstOccurrence" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeLast" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="removeLastOccurrence" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="size" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="take" native="false" return="E" static="false" synchronized="false" visibility="public">
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="takeFirst" native="false" return="E" static="false" synchronized="false" visibility="public">
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="takeLast" native="false" return="E" static="false" synchronized="false" visibility="public">
+<exception name="InterruptedException" type="java.lang.InterruptedException">
+</exception>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="LinkedBlockingDeque.1" static="true" visibility=""/>
+<class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="LinkedBlockingDeque.AbstractItr" static="false" visibility="">
+<implements name="java.util.Iterator" name-generic-aware="java.util.Iterator&lt;E&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="hasNext" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="next" native="false" return="E" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remove" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque.AbstractItr" extends-generic-aware="com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque.AbstractItr" final="false" name="LinkedBlockingDeque.DescendingItr" static="false" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque.AbstractItr" extends-generic-aware="com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque.AbstractItr" final="false" name="LinkedBlockingDeque.Itr" static="false" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="LinkedBlockingDeque.Node" static="true" visibility="">
+<typeParameters>
+<typeParameter name="E"/>
+</typeParameters>
+</class>
+</package>
+<package name="com.nostra13.universalimageloader.core.decode">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BaseImageDecoder" static="false" visibility="public">
+<implements name="com.nostra13.universalimageloader.core.decode.ImageDecoder" name-generic-aware="com.nostra13.universalimageloader.core.decode.ImageDecoder">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="BaseImageDecoder" static="false" type="com.nostra13.universalimageloader.core.decode.BaseImageDecoder" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="BaseImageDecoder" static="false" type="com.nostra13.universalimageloader.core.decode.BaseImageDecoder" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="considerExactScaleAndOrientaiton" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.core.decode.ImageDecodingInfo">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="decode" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.decode.ImageDecodingInfo">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="decodeStream" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.io.InputStream">
+</parameter>
+<parameter name="p1" type="android.graphics.BitmapFactory.Options">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="defineExifOrientation" native="false" return="com.nostra13.universalimageloader.core.decode.BaseImageDecoder.ExifInfo" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="defineImageSizeAndRotation" native="false" return="com.nostra13.universalimageloader.core.decode.BaseImageDecoder.ImageFileInfo" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.io.InputStream">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getImageStream" native="false" return="java.io.InputStream" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.decode.ImageDecodingInfo">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="prepareDecodingOptions" native="false" return="android.graphics.BitmapFactory.Options" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.assist.ImageSize">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.core.decode.ImageDecodingInfo">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setLoggingEnabled" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="ERROR_CANT_DECODE_IMAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;Image can't be decoded [%s]&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LOG_FLIP_IMAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;Flip image horizontally [%s]&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LOG_ROTATE_IMAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;Rotate image on %1$d° [%2$s]&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LOG_SABSAMPLE_IMAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;Subsample original image (%1$s) to %2$s (scale = %3$d) [%4$s]&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LOG_SCALE_IMAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;Scale subsampled image (%1$s) to %2$s (scale = %3$.5f) [%4$s]&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="loggingEnabled" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BaseImageDecoder.ExifInfo" static="true" visibility="protected"/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BaseImageDecoder.ImageFileInfo" static="true" visibility="protected"/>
+<interface abstract="true" deprecated="not deprecated" final="false" name="ImageDecoder" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="decode" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.decode.ImageDecodingInfo">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ImageDecodingInfo" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="ImageDecodingInfo" static="false" type="com.nostra13.universalimageloader.core.decode.ImageDecodingInfo" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="com.nostra13.universalimageloader.core.assist.ImageSize">
+</parameter>
+<parameter name="p3" type="com.nostra13.universalimageloader.core.assist.ViewScaleType">
+</parameter>
+<parameter name="p4" type="com.nostra13.universalimageloader.core.download.ImageDownloader">
+</parameter>
+<parameter name="p5" type="com.nostra13.universalimageloader.core.DisplayImageOptions">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDecodingOptions" native="false" return="android.graphics.BitmapFactory.Options" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDownloader" native="false" return="com.nostra13.universalimageloader.core.download.ImageDownloader" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getExtraForDownloader" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getImageKey" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getImageScaleType" native="false" return="com.nostra13.universalimageloader.core.assist.ImageScaleType" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getImageUri" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getTargetSize" native="false" return="com.nostra13.universalimageloader.core.assist.ImageSize" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getViewScaleType" native="false" return="com.nostra13.universalimageloader.core.assist.ViewScaleType" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+</package>
+<package name="com.nostra13.universalimageloader.core.display">
+<interface abstract="true" deprecated="not deprecated" final="false" name="BitmapDisplayer" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="display" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="android.widget.ImageView">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="FadeInBitmapDisplayer" static="false" visibility="public">
+<implements name="com.nostra13.universalimageloader.core.display.BitmapDisplayer" name-generic-aware="com.nostra13.universalimageloader.core.display.BitmapDisplayer">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="FadeInBitmapDisplayer" static="false" type="com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="animate" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.widget.ImageView">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="display" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="android.widget.ImageView">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="FakeBitmapDisplayer" static="false" visibility="public">
+<implements name="com.nostra13.universalimageloader.core.display.BitmapDisplayer" name-generic-aware="com.nostra13.universalimageloader.core.display.BitmapDisplayer">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="FakeBitmapDisplayer" static="false" type="com.nostra13.universalimageloader.core.display.FakeBitmapDisplayer" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="display" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="android.widget.ImageView">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="RoundedBitmapDisplayer" static="false" visibility="public">
+<implements name="com.nostra13.universalimageloader.core.display.BitmapDisplayer" name-generic-aware="com.nostra13.universalimageloader.core.display.BitmapDisplayer">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="RoundedBitmapDisplayer" static="false" type="com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="display" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="android.widget.ImageView">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="roundCorners" native="false" return="android.graphics.Bitmap" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="android.widget.ImageView">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="RoundedBitmapDisplayer.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="SimpleBitmapDisplayer" static="false" visibility="public">
+<implements name="com.nostra13.universalimageloader.core.display.BitmapDisplayer" name-generic-aware="com.nostra13.universalimageloader.core.display.BitmapDisplayer">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="SimpleBitmapDisplayer" static="false" type="com.nostra13.universalimageloader.core.display.SimpleBitmapDisplayer" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="display" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="android.widget.ImageView">
+</parameter>
+</method>
+</class>
+</package>
+<package name="com.nostra13.universalimageloader.core.download">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BaseImageDownloader" static="false" visibility="public">
+<implements name="com.nostra13.universalimageloader.core.download.ImageDownloader" name-generic-aware="com.nostra13.universalimageloader.core.download.ImageDownloader">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="BaseImageDownloader" static="false" type="com.nostra13.universalimageloader.core.download.BaseImageDownloader" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="BaseImageDownloader" static="false" type="com.nostra13.universalimageloader.core.download.BaseImageDownloader" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getStream" native="false" return="java.io.InputStream" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getStreamFromAssets" native="false" return="java.io.InputStream" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getStreamFromContent" native="false" return="java.io.InputStream" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object">
+</parameter>
+<exception name="FileNotFoundException" type="java.io.FileNotFoundException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getStreamFromDrawable" native="false" return="java.io.InputStream" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getStreamFromFile" native="false" return="java.io.InputStream" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getStreamFromNetwork" native="false" return="java.io.InputStream" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getStreamFromOtherSource" native="false" return="java.io.InputStream" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+<field deprecated="not deprecated" final="true" name="ALLOWED_URI_CHARS" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;@#&amp;=*+-_.,:!?()/~'%&quot;" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="BUFFER_SIZE" static="true" transient="false" type="int" type-generic-aware="int" value="8192" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEFAULT_HTTP_CONNECT_TIMEOUT" static="true" transient="false" type="int" type-generic-aware="int" value="5000" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DEFAULT_HTTP_READ_TIMEOUT" static="true" transient="false" type="int" type-generic-aware="int" value="20000" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="connectTimeout" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="context" static="false" transient="false" type="android.content.Context" type-generic-aware="android.content.Context" visibility="protected" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="readTimeout" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BaseImageDownloader.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="com.nostra13.universalimageloader.core.download.BaseImageDownloader" extends-generic-aware="com.nostra13.universalimageloader.core.download.BaseImageDownloader" final="false" name="HttpClientImageDownloader" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="HttpClientImageDownloader" static="false" type="com.nostra13.universalimageloader.core.download.HttpClientImageDownloader" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="org.apache.http.client.HttpClient">
+</parameter>
+</constructor>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="ImageDownloader" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="getStream" native="false" return="java.io.InputStream" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme&gt;" final="true" name="ImageDownloader.Scheme" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="crop" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="ofUri" native="false" return="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme[]" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="wrap" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<field deprecated="not deprecated" final="true" name="ASSETS" static="true" transient="false" type="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" type-generic-aware="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="CONTENT" static="true" transient="false" type="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" type-generic-aware="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DRAWABLE" static="true" transient="false" type="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" type-generic-aware="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FILE" static="true" transient="false" type="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" type-generic-aware="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HTTP" static="true" transient="false" type="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" type-generic-aware="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HTTPS" static="true" transient="false" type="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" type-generic-aware="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="UNKNOWN" static="true" transient="false" type="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" type-generic-aware="com.nostra13.universalimageloader.core.download.ImageDownloader.Scheme" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="NetworkDeniedImageDownloader" static="false" visibility="public">
+<implements name="com.nostra13.universalimageloader.core.download.ImageDownloader" name-generic-aware="com.nostra13.universalimageloader.core.download.ImageDownloader">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="NetworkDeniedImageDownloader" static="false" type="com.nostra13.universalimageloader.core.download.NetworkDeniedImageDownloader" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.download.ImageDownloader">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getStream" native="false" return="java.io.InputStream" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="NetworkDeniedImageDownloader.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SlowNetworkImageDownloader" static="false" visibility="public">
+<implements name="com.nostra13.universalimageloader.core.download.ImageDownloader" name-generic-aware="com.nostra13.universalimageloader.core.download.ImageDownloader">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="SlowNetworkImageDownloader" static="false" type="com.nostra13.universalimageloader.core.download.SlowNetworkImageDownloader" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.download.ImageDownloader">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getStream" native="false" return="java.io.InputStream" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SlowNetworkImageDownloader.1" static="true" visibility=""/>
+</package>
+<package name="com.nostra13.universalimageloader.core.process">
+<interface abstract="true" deprecated="not deprecated" final="false" name="BitmapProcessor" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="process" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+</method>
+</interface>
+</package>
+<package name="com.nostra13.universalimageloader.utils">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="ImageSizeUtils" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="computeImageSampleSize" native="false" return="int" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.assist.ImageSize">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.core.assist.ImageSize">
+</parameter>
+<parameter name="p2" type="com.nostra13.universalimageloader.core.assist.ViewScaleType">
+</parameter>
+<parameter name="p3" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="computeImageScale" native="false" return="float" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="com.nostra13.universalimageloader.core.assist.ImageSize">
+</parameter>
+<parameter name="p1" type="com.nostra13.universalimageloader.core.assist.ImageSize">
+</parameter>
+<parameter name="p2" type="com.nostra13.universalimageloader.core.assist.ViewScaleType">
+</parameter>
+<parameter name="p3" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="defineTargetSizeForView" native="false" return="com.nostra13.universalimageloader.core.assist.ImageSize" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.widget.ImageView">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ImageSizeUtils.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="IoUtils" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="closeSilently" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.io.Closeable">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="copyStream" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.io.InputStream">
+</parameter>
+<parameter name="p1" type="java.io.OutputStream">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="L" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="d" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object...">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="e" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object...">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="e" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Throwable">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="e" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Throwable">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="java.lang.Object...">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="i" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object...">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="w" native="false" return="void" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.Object...">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="StorageUtils" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="getCacheDirectory" native="false" return="java.io.File" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getIndividualCacheDirectory" native="false" return="java.io.File" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getOwnCacheDirectory" native="false" return="java.io.File" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+</class>
+</package>
+</api>

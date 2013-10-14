@@ -1,0 +1,15 @@
+<metadata>
+	<!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+    <!-- Binding to universal-image-loader-1.8.4.jar -->
+  <!-- We are changing the return types to eliminate errors like 'return type must be 'Java.Lang.Object' to match overridden member' -->
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.cache.memory.impl']/class[@name='FIFOLimitedMemoryCache']/method[@name='removeNext']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.cache.memory.impl']/class[@name='LargestLimitedMemoryCache']/method[@name='removeNext']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.cache.memory.impl']/class[@name='LRULimitedMemoryCache']/method[@name='removeNext']" name="managedReturn">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.cache.memory.impl']/class[@name='UsingFreqLimitedMemoryCache']/method[@name='removeNext']" name="managedReturn">Java.Lang.Object</attr>
+</metadata>

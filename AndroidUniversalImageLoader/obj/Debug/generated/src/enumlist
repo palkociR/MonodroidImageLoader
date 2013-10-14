@@ -1,0 +1,5 @@
+com.nostra13.universalimageloader.core.assist.FailReason$FailType:Com.Nostra13.Universalimageloader.Core.Assist:FailReason.FailType
+com.nostra13.universalimageloader.core.assist.ImageScaleType:Com.Nostra13.Universalimageloader.Core.Assist:ImageScaleType
+com.nostra13.universalimageloader.core.assist.QueueProcessingType:Com.Nostra13.Universalimageloader.Core.Assist:QueueProcessingType
+com.nostra13.universalimageloader.core.assist.ViewScaleType:Com.Nostra13.Universalimageloader.Core.Assist:ViewScaleType
+com.nostra13.universalimageloader.core.download.ImageDownloader$Scheme:Com.Nostra13.Universalimageloader.Core.Download:ImageDownloader.Scheme

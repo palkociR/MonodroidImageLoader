@@ -1,0 +1,4 @@
+C:\Users\Roman\Documents\AndroidUniversalImageLoader\AndroidUniversalImageLoader\bin\Debug\AndroidUniversalImageLoader.dll
+C:\Users\Roman\Documents\AndroidUniversalImageLoader\AndroidUniversalImageLoader\bin\Debug\AndroidUniversalImageLoader.pdb
+C:\Users\Roman\Documents\AndroidUniversalImageLoader\AndroidUniversalImageLoader\obj\Debug\AndroidUniversalImageLoader.dll
+C:\Users\Roman\Documents\AndroidUniversalImageLoader\AndroidUniversalImageLoader\obj\Debug\AndroidUniversalImageLoader.pdb

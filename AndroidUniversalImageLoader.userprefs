@@ -1,0 +1,30 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AndroidUniversalImageLoader\Additions\Fixes.cs">
+    <Files>
+      <File FileName="AndroidUniversalImageLoader\Transforms\Metadata.xml" Line="1" Column="1" />
+      <File FileName="AndroidUniversalImageLoader\Additions\Fixes.cs" Line="40" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Option id="ShowAllFiles" value="True" />
+          <Node name="AndroidUniversalImageLoader" expanded="True">
+            <Node name="Additions" expanded="True">
+              <Node name="Fixes.cs" selected="True" />
+            </Node>
+            <Node name="Jars" expanded="True" />
+            <Node name="Transforms" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
